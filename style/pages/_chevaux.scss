@@ -1,0 +1,230 @@
+@import '../method/colors';
+@import '../method/function';
+.horse{
+    &_s1{
+        width: 100%;
+        height: 40vh;
+        background: url("../img/ranch-4426781_1920.jpg")no-repeat center/cover;
+        position: relative;
+        &_title{
+            @extend %Pabs;
+            p{
+                font-size: 40px;
+                color: $white;
+                @include responsive(tablet){
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+    &_s2{
+        width: 100%;
+        height: auto;
+        &_content{
+            @include responsive(pc){
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            &_boxHorse{
+                width: 80%;
+                height: 70vh;
+                margin: auto;
+                margin-top: 15%;
+                @include responsive(tablet){
+                    width: 40%;
+                }
+                @include responsive(pc){
+                    width: 30%;
+                    margin-top: 7%;
+                }
+                &_bg,&_bg2,&_bg3{
+                    width: 100%;
+                    height: 50%;
+                    background: url(../img/bg.jpg)no-repeat center/cover;
+                }
+                &_bg2{
+                    background: url(../img/cheval1.png)no-repeat center/cover;
+                }
+                &_bg3{
+                    background: url(../img/cheval3.png)no-repeat center/cover;
+                }
+                &_bgB{
+                    width: 100%;
+                    height: 100%;
+                    background: $black_t;
+                    display: none;
+                }
+                p{
+                    margin: 8% 15%;
+                    font-size: 20px;
+                    @include responsive(lg){
+                        font-size: 30px;
+                    }
+                }
+                a{
+                    margin:0 10%;
+                    font-size: 20px;
+                    padding: 5px 15px;
+                    background: $or;
+                    border-radius: 20px;
+                    text-decoration: none;
+                    color: $white;
+                    @include responsive(pc){
+                        margin: 0 15%;
+                    }
+                    @include responsive(lg){
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        &_pop-up,
+        &_pop-up2,
+        &_pop-up3{
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0,0, 0.7);
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            &_content{
+                width: 70%;
+                height: 90%;
+                background-color: white;
+                opacity: 1;
+                border-radius: 4px;
+                position: relative;
+                text-align: center;
+                &_close,
+                &_close2,
+                &_close3{
+                    position: absolute;
+                    top: 0;
+                    right: 14px;
+                    font-size: 30px;
+                    cursor: pointer;
+                    @include responsive(lg){
+                        font-size: 35px;
+                    }
+                }
+                &_bg{
+                    width: 100%;
+                    height: 30vh;
+                    background: url(../img/carousel/imgcar2.jpg)no-repeat center/cover;    
+                    animation: animate 20s; 
+                    @keyframes animate{
+                        0%,100%{
+                            background: url(../img/carousel/imgcar2.jpg)no-repeat center/cover;
+                        }
+                        25%{
+                            background: url(../img/carousel/imgcar1.jpg)no-repeat center/cover;
+                        }
+                        75%{
+                            background: url(../img/carousel/imgcar3.jpg)no-repeat center/cover;
+                        }
+                    } 
+                }
+                &_bg2{
+                    width: 100%;
+                    height: 30vh;
+                    background: url(../img/carousel/imgcar2.jpg)no-repeat center/cover;    
+                    animation: animate2 20s; 
+                    @keyframes animate2{
+                        0%,100%{
+                            background: url(../img/carousel/imgcar2.jpg)no-repeat center/cover;
+                        }
+                        25%{
+                            background: url(../img/carousel/imgcar1.jpg)no-repeat center/cover;
+                        }
+                        75%{
+                            background: url(../img/carousel/imgcar3.jpg)no-repeat center/cover;
+                        }
+                    }  
+                }
+                &_bg3{
+                    width: 100%;
+                    height: 30vh;
+                    background: url(../img/carousel/imgcar2.jpg)no-repeat center/cover;    
+                    animation: animate3 20s;
+                    @keyframes animate3{
+                        0%,100%{
+                            background: url(../img/carousel/imgcar2.jpg)no-repeat center/cover;
+                        }
+                        25%{
+                            background: url(../img/carousel/imgcar1.jpg)no-repeat center/cover;
+                        }
+                        75%{
+                            background: url(../img/carousel/imgcar3.jpg)no-repeat center/cover;
+                        }
+                    }   
+                }
+                &_title{
+                    padding: 20px;
+                    text-transform: uppercase;
+                    letter-spacing: 8px;
+                    @include responsive(tablet){
+                        font-size: 20px;
+                        margin-top: 10%;
+                    }
+                    @include responsive(lg){
+                        font-size: 30px;
+                    }
+                }
+                &_block{
+                    font-size: 14px;
+                    margin: 0 2%;
+                    @include responsive(tablet){
+                        font-size: 20px;
+                    }
+                    @include responsive(lg){
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+    &_s3{
+        width: 100%;
+        height: 80vh;
+        margin: 10% 0;
+        background: url(../img/horses-5716127_1920.jpg)no-repeat center/cover;
+        background-attachment: fixed;
+        text-align: center;
+        @extend %DF_center;
+        @include responsive(tablet){
+            height: 40vh;
+        }
+        @include responsive(pc){
+            margin: 5% 0;
+        }
+        &_box{
+            img{
+                width: 100px;
+                height: 12vh;
+                border-radius: 50px;
+                @include responsive(pc){
+                    height: 10vh;
+                }
+            }
+            &_box-text{
+                margin-top: 5%;
+                @include responsive(pc){
+                    margin:2% ;
+                }
+                p{
+                    color: $white;
+                    width: 70%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    &_s4{
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,40 @@
+
+%Pabs{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+%DF_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%DF_spaceAround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+@mixin responsive($screens) {
+    
+    @if $screens == tablet{
+        @media screen and (min-width:600px) {
+            @content;
+        }   
+    }
+    @if $screens == pc{
+        @media screen and (min-width:1020px) {
+            @content;
+        }  
+    }
+    @if $screens == lg{
+        @media  screen and(min-width:2500px) {
+            @content;
+        }
+    }
+}

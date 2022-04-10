@@ -1,0 +1,191 @@
+@import '../method/colors';
+@import '../method/function';
+.competition{
+    width: 100%;
+    height: auto;
+
+    &_s1{
+        width: 100%;
+        height: 65vh;
+        &_box{
+            width: 100%;
+            height: 40vh;
+            background: url(../img/jez-timms-ilox07iZ5iE-unsplash.jpg)no-repeat center/cover;
+            text-align: center;
+            &_title{
+                padding-top: 10%;
+                @include responsive(pc){
+                    padding-top: 5%;
+                }
+                &::first-line{
+                    color: $or;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    @include responsive(pc){
+                        font-size: 30px;
+                    }
+                    @include responsive(lg){
+                        font-size: 50px;
+                    }
+                }
+                p{
+                    color: $white;
+                    font-size: 20px;
+                    @include responsive(lg){
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            &_img{
+                width: 60%;
+                height: auto;
+                border: 1px solid $or;
+                border-radius: 20px;
+                margin: 10% auto;
+                @include responsive(pc){
+                    margin: 5% auto;
+                }
+                &_bg{
+                   width: 100%;
+                    height: 30vh;
+                    background: url(../img/ivana-cajina-dppDttAY_-E-unsplash.jpg)no-repeat center/cover;
+                    background-attachment: scroll;
+                    border-radius: 20px;
+                }
+                p{
+                    margin:2% 0;
+                    @include responsive(lg){
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    &_s2{
+        width: 100%;
+        height: auto;
+        background: url(../img/horses-5716127_1920.jpg)no-repeat center/cover;
+        background-attachment: fixed;
+        position: relative;
+        @extend %DF_center;
+        &_boxCard{
+            width:90%;
+            height: auto;
+            @include responsive(tablet){
+                width: 70%;
+            }
+            @include responsive(pc){
+                width: 90%;
+                display: flex;
+                justify-content: space-around;
+            }
+            &_card{
+                width: 100%;
+                height: auto;
+                background: $white_t;
+                text-align: center;
+                margin: 10% 0;
+                padding: 10%;
+                border-radius: 5%;
+                @include responsive(pc){
+                    padding: 7%;
+                }
+                &:nth-child(2){
+                    background: $black_t;
+                    color: $white;
+                    @include responsive(pc){
+                        margin: 0 2%;
+                        border-radius: 0;
+                        h1{
+                            margin-top: 50%;
+                        }
+                        p{
+                            &:last-child{
+                                margin-top: 25%;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    background: url(../img/pexels-jean-van-der-meulen-1559388.jpg)no-repeat center/cover;
+                    transition: ease-out 2s;
+                    color: $white;
+                }
+                h1{
+                    text-transform: uppercase;
+                    margin-bottom: 2%;
+                    @include responsive(lg){
+                        font-size: 40px;
+                    }
+                }
+                &_line{
+                    width: 20%;
+                    height: 2px;
+                    background: $or;
+                    margin: 4% auto;
+                    margin-bottom: 5%;
+                }
+                p{
+                    margin: 14% 0;
+                    &:last-child{
+                        color:$or;
+                    }
+                    @include responsive(pc){
+                        font-size: 20px;
+                    }
+                    @include responsive(lg){
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    &_s3{
+        width: 80%;
+        height: auto;
+        margin: auto;
+        @include responsive(tablet){
+            margin-top: 5%;
+            background: url(../img/pexels-edward-eyer-677874.jpg)no-repeat center/cover;
+            background-attachment: fixed;
+        }
+        @include responsive(pc){
+            width: 100%;
+            display: flex;
+            flex-flow: wrap;
+        }
+        &_boxText{
+            margin: 10% auto;
+            box-shadow: 1px 1px 18px 2px  $black;
+            border: 5px solid $or;
+            padding: 5%;
+            text-align: center;
+            color: $white;
+            @include responsive(pc){
+                width: 70%;
+                font-size: 20px;
+                margin: 5% auto;
+            }
+            p{
+                @include responsive(lg){
+                    font-size: 30px;
+                }
+            }
+            img{
+                width: 150px;
+                height: 250px;
+                @include responsive(tablet){
+                    float: left;
+                }
+                @include responsive(lg){
+                    width: 200px;
+                    height: 350px;
+                }
+            }
+        }
+    }
+
+}

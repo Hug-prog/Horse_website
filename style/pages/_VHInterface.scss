@@ -1,0 +1,46 @@
+@import '../method/colors';
+@import '../method/function';
+
+.VHInterface{
+    &_s1{
+        width: 80%;
+        height: auto;
+        margin: auto;
+        p{
+            text-align: center;
+            font-size: 30px;
+            @include responsive(pc){
+                font-size: 50px;
+            }
+        }
+        &_boxBtn{
+            text-align: center;
+            @include responsive(pc){
+                display: flex;
+                flex-flow: wrap;
+            }
+            input{
+                width:80%;
+                height: 20vh;
+                @include responsive(tablet){
+                    width: 50%;
+                }
+                @include responsive(pc){
+                    width: 30%;
+                    height: 30vh;
+                    margin-left: 3%;
+                    margin-top: 5%;
+                }
+                color: $white;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-color: unset;
+                margin: auto;
+                margin-top: 15%;
+                border: 1px solid $or;
+                box-shadow: 1px 1px 16px 2px  $or;
+            }
+        }
+    }
+}
